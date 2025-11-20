@@ -1,39 +1,37 @@
-name: CI
+name: Release Obsidian Plugin
 
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    tags:
+      - "*"
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
+      - name: Build plugin
         run: npm run build
 
-      - name: Upload plugin bundle
-        uses: actions/upload-artifact@v4
+      - name: Prepare release assets
+        run: |
+          mkdir release
+          cp manifest.json release/
+          cp main.js release/
+          if [ -f styles.css ]; then cp styles.css release/; fi
+          if [ -f versions.json ]; then cp versions.json release/; fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: simple-webhook-bundle
-          path: |
-            manifest.json
-            main.js
-            styles.css
+          files: release/*
