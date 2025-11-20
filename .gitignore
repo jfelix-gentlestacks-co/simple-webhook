@@ -4,3 +4,4 @@ data.json
 .DS_Store
 Thumbs.db
 .vscode/
+.github/copilot-instructions.md
