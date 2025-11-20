@@ -1,0 +1,12 @@
+{
+  "id": "gentlestacks-simple-webhook",
+  "name": "Simple Webhook",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Send lightweight JSON webhooks on Obsidian events.",
+  "author": "Jérôme Félix",
+  "authorUrl": "https://gentlestacks.co",
+  "isDesktopOnly": false,
+  "js": "main.js",
+  "css": "styles.css"
+}

@@ -1,0 +1,9 @@
+.webhook-on-save-json-preview {
+	font-family: var(--font-monospace);
+	font-size: 0.8rem;
+	background-color: var(--background-secondary-alt);
+	border-radius: 4px;
+	padding: 0.75rem;
+	white-space: pre;
+	overflow: auto;
+}

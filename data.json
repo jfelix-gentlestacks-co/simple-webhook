@@ -1,0 +1,8 @@
+{
+  "webhookUrl": "https://gentlestacks.app.n8n.cloud/webhook/5278395a-2229-419e-8b21-405574b3ac7d",
+  "enabled": true,
+  "showNotices": false,
+  "autoMode": false,
+  "sendOnFileOpen": true,
+  "sendOnLeafChange": false
+}
