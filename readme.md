@@ -29,6 +29,20 @@ Simple Webhook is a lightweight Obsidian plugin that sends JSON payloads to your
 - **Send on pane change** – Fire when the active leaf changes.
 - **Show notices** – Enable Obsidian notices for errors and toggles.
 
+## Screenshots
+Add at least one screenshot of the plugin’s settings panel to help reviewers and users. Place PNGs in `docs/` and reference them here, for example:
+
+```
+docs/
+  screenshot-settings.png
+```
+
+Then embed with:
+
+```markdown
+![Simple Webhook settings](docs/screenshot-settings.png)
+```
+
 ## JSON payloads
 ### File events (`modify`, `create`, `delete`, `file-open`, `leaf-change`)
 ```json
@@ -66,6 +80,10 @@ Simple Webhook is a lightweight Obsidian plugin that sends JSON payloads to your
 2. Run `npm run build` to refresh `main.js`.
 3. Zip `main.js`, `manifest.json`, and `styles.css` and attach the archive to the GitHub release.
 4. Tag the release with the same version number and submit a PR to `obsidianmd/obsidian-releases` with the updated `manifest.json` and `versions.json`.
+
+## Changelog
+### 1.0.0
+- Initial public release.
 
 ## License
 Released under the [MIT License](./LICENSE).
